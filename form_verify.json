@@ -1,0 +1,143 @@
+{
+  "view": {
+    "type": "view.list",
+    "items": [
+      {
+        "type": "view.image",
+        "ratio": [1, 1],
+        "rotatable": true,
+        "url": {
+          "type": "data.input",
+          "path": "image"
+        }
+      },
+      {
+        "type": "field.button-radio-group",
+        "label": {
+          "type": "helper.translate",
+          "key": "satisfy-title"
+        },
+        "options": [
+          {
+            "label": {
+              "type": "helper.translate",
+              "key": "yes"
+            },
+            "value": "yes"
+          },
+          {
+            "label": {
+              "type": "helper.translate",
+              "key": "multiple-items"
+            },
+            "value": "multiple-items"
+          },
+          {
+            "label": {
+              "type": "helper.translate",
+              "key": "not-kitchenware"
+            },
+            "value": "not-kitchenware"
+          },
+          {
+            "label": {
+              "type": "helper.translate",
+              "key": "internet"
+            },
+            "value": "internet"
+          },
+          {
+            "label": {
+              "type": "helper.translate",
+              "key": "other"
+            },
+            "value": "other"
+          }
+        ],
+        "data": {
+          "type": "data.output",
+          "path": "verdict"
+        },
+        "validation": {
+          "type": "condition.required"
+        }
+      },
+      {
+        "type": "field.button-radio-group",
+        "label": {
+          "type": "helper.translate",
+          "key": "item-class"
+        },
+        "options": [
+          {
+            "label": {
+              "type": "helper.translate",
+              "key": "plate"
+            },
+            "value": "plate"
+          },
+          {
+            "label": {
+              "type": "helper.translate",
+              "key": "glass"
+            },
+            "value": "glass"
+          },
+          {
+            "label": {
+              "type": "helper.translate",
+              "key": "cup"
+            },
+            "value": "cup"
+          },
+          {
+            "label": {
+              "type": "helper.translate",
+              "key": "spoon"
+            },
+            "value": "spoon"
+          },
+          {
+            "label": {
+              "type": "helper.translate",
+              "key": "fork"
+            },
+            "value": "fork"
+          },
+          {
+            "label": {
+              "type": "helper.translate",
+              "key": "knife"
+            },
+            "value": "knife"
+          },
+          {
+            "label": {
+              "type": "helper.translate",
+              "key": "other"
+            },
+            "value": "other"
+          }
+        ],
+        "validation": {
+          "type": "condition.required",
+          "hint": "select an option"
+        },
+        "data": {
+          "type": "data.output",
+          "path": "class"
+        }
+      }
+    ]
+  },
+  "plugins": [
+    {
+      "type": "plugin.toloka",
+      "layout": {
+        "kind": "scroll",
+        "taskWidth": 600
+      }
+    }
+  ],
+  "vars": {}
+}

@@ -1,0 +1,80 @@
+{
+    "view": {
+      "type": "view.list",
+      "items": [
+        {
+          "type": "view.text",
+          "content": "Make your picture and upload it"
+        },
+        {
+          "type": "field.media-file",
+          "data": {
+            "type": "data.output",
+            "path": "image"
+          },
+          "label": "Image of kitchenware",
+          "accept": {
+            "photo": true,
+            "fileSystem": true,
+            "gallery": true
+          },
+          "multiple": false,
+          "validation": {
+            "type": "condition.required",
+            "hint": "you have to upload a picture"
+          }
+        },
+        {
+          "type": "field.button-radio-group",
+          "label": "Class",
+          "options": [
+            {
+              "label": "Plate",
+              "value": "plate"
+            },
+            {
+              "label": "Glass",
+              "value": "glass"
+            },
+            {
+              "label": "Cup",
+              "value": "cup"
+            },
+            {
+              "label": "Spoon",
+              "value": "spoon"
+            },
+            {
+              "label": "Fork",
+              "value": "fork"
+            },
+            {
+              "label": "Knife",
+              "value": "knife"
+            },
+            {
+              "label": "Other",
+              "value": "other"
+            }
+          ],
+          "validation": {
+            "type": "condition.required",
+            "hint": "select an option"
+          },
+          "data": {
+            "type": "data.output",
+            "path": "class"
+          }
+        }
+      ]
+    },
+    "plugins": [
+      {
+        "type": "plugin.toloka",
+        "layout": {
+          "kind": "scroll",
+          "taskWidth": 600
+        }
+      }
+    ]
+  }
