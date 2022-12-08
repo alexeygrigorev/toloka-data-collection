@@ -159,6 +159,10 @@ def make_thumbnail(attachment):
         image.thumbnail((1000, 1000), resample=Image.Resampling.BILINEAR)
 
         output = f'thumbnails/{attachment}.jpg'
+
+        if image.mode != 'RGB':
+            image = image.convert('RGB')
+
         image.save(output, format='jpeg', quality=95)
         print(f'saved a thumbnail to {output}')
         return output
