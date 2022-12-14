@@ -7,7 +7,12 @@ name = "pypi"
 jupyter = "*"
 pandas = "*"
 getpass4 = "*"
-toloka-kit = "*"
+toloka-kit = "==1.0.2"
+tqdm = "*"
+elasticsearch = "==8.5.0"
+pillow = "*"
+imagehash = "*"
+boto3 = "*"
 
 [dev-packages]
 
